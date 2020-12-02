@@ -1,11 +1,17 @@
 <template>
   <div id="app">
-    <Header />
-    <Main />
-    <Skills />
-    <About />
-    <Portfolio />
-    <Contacts />
+    <NavMobile v-bind:class="{ open: showNav }"/>
+    <Burger 
+    @click.native="showNav = !showNav"
+    v-if="mobileView"/>
+    <Header v-if="!mobileView"/>
+    <div class="content" v-bind:class="{ opened: showNav }">
+      <Main />
+      <Skills />
+      <About />
+      <Portfolio />
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -15,7 +21,9 @@ import Main from './components/Main';
 import About from './components/About';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
-import Contacts from './components/Contacts';
+import Footer from './components/Footer';
+import Burger from './components/Burger';
+import NavMobile from './components/NavMobile';
 export default {
   name: 'App',
   components: {
@@ -24,9 +32,28 @@ export default {
     About,
     Skills,
     Portfolio,
-    Contacts
+    Footer,
+    Burger,
+    NavMobile
+  },
+  data() {
+      return {
+          mobileView: true,
+          showNav: false
+      }
+  },
+  methods: {
+    handleView() {
+      this.mobileView = window.innerWidth <= 768;
+    }
+  },
+  created() {
+    this.handleView();
+    window.addEventListener('resize', this.handleView);
+    console.log("Get out");
   }
 }
+
 </script>
 
 <style lang="scss">
@@ -40,12 +67,28 @@ export default {
     margin: 0;
     box-sizing: border-box;
   }
+  .content {
+    position: absolute;
+    top: 0;
+    transition: 1s cubic-bezier(0,.12,.14,1);
+  }
+  .open {
+    z-index: 2;
+  }
+  .opened {
+    transform: translateX(50vw);
+  }
   @media(max-width: 576px) {
     body {
-      font-size: 7px;
+      font-size: 9px;
       $main-container: 80%;
     }
   }
+  // @media(max-width: 768px) {
+  //   body {
+  //     overflow-x: hidden;
+  //   }
+  // }
   @media(min-width: 576px) {
     body {
       font-size: 10px;

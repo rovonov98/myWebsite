@@ -1,43 +1,45 @@
 <template>
-    <header class="header">
+    <div class="header">
         <a name="home"></a>
         <nav class="nav">
-            <div class="logo nav-link">
-                <a class="nav-a" href="#home">HOME</a>
-            </div>
             <ul class="navbar">
+                <li class="nav-link"><a class="nav-a" href="#home">HOME</a></li>
                 <li class="nav-link"><a class="nav-a" href="#skills">SKILLS</a></li>
                 <li class="nav-link"><a class="nav-a" href="#about">ABOUT</a></li>
                 <li class="nav-link"><a class="nav-a" href="#portfolio">PORTFOLIO</a></li>
                 <li class="nav-link"><a class="nav-a" href="#contacts">CONTACS</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
 </template>
 
 <style scoped lang="scss">
     .header{
-        position: sticky;
-        z-index: 2;       
+        position: fixed;
         max-width: 100%; 
         top: 0;
         left: 0;
-        right: 0;
         background: $main-color-two;
         border-radius: 1%;
     }
     .nav {
-        margin: 0 auto;
-        max-width: $main-container;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
     .navbar {
         display: flex;
         list-style: none;
-        justify-content: space-between;
-        max-width: 100%;
+        position: absolute;
+        left: 0;
+        height: 100vh;
+        top: 0;
+        background: $main-color-two;
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+        justify-content: center;
     }
     .nav-link {
         :hover {
@@ -53,5 +55,6 @@
         display: block;
         max-width: 100%;
         padding: 1.5em;
+        letter-spacing: .1em
     }
 </style>

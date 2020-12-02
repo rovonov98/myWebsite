@@ -21,6 +21,7 @@
         background: $main-color-two;
         padding: 1em;
         margin: 0;
+        border-radius: 1%;
     }
     .about {
         display: flex;

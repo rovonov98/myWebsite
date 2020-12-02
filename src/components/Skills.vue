@@ -24,8 +24,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .skills_outer {
-        max-width: $main-container;
+    .skills-outer {
+        background-color: #FFF;
     }
     .skills-section {
         display: flex;
@@ -44,9 +44,6 @@ export default {
     }
     .skills {
         display: flex;
-        // display: grid;
-        // grid-template-columns: repeat(5, 1fr);
-        // justify-content: space-between;
         flex-wrap: wrap;
         max-width: 100%;
     }

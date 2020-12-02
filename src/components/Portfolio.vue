@@ -28,6 +28,7 @@ export default {
         align-items: center;
         flex-direction: column;
         padding: 2em;
+        background: #FFF;
     }
     .projects {
         display: flex;
