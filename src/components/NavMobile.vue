@@ -29,7 +29,7 @@
         list-style: none;
         position: absolute;
         left: 0;
-        height: 100vh;
+        height: 105vh;
         top: 0;
         background: $main-color-two;
         display: flex;
