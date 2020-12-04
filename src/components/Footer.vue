@@ -3,9 +3,19 @@
         <div class="footer">
             <div class="footer-contacts">
                 <a name="contacts"></a>
-                <p class="contact">Email: pokerniigenii12@gmail.com</p>
-                <p class="contact">Number: 7(982) 498-43-42</p>
-                <p class="contact">Github: <a href="https://github.com/rovonov98"></a>https://github.com/rovonov98</p>
+                <div class="contact">
+                    <img class="img" src="../assets/img/gmail.svg" alt="">
+                    <p>Mail:pokerniigenii12@gmail.com</p>
+                </div>
+                <div class="contact">
+                    <img class="img" src="../assets/img/phone.svg" alt="">
+                    <p>Number: 7(982) 498-43-42</p>
+                </div>
+                <div class="contact">
+                    <img class="img" src="../assets/img/github.svg" alt="">
+                    <p >Github: <a href="https://github.com/rovonov98"></a>https://github.com/rovonov98</p>
+                </div>
+                
             </div>
             <p>&copy; Copyright 2020</p>
         </div>
@@ -33,5 +43,9 @@
     }
     .contact {
         margin: .3em;
+        display: flex;
+    }
+    .img {
+        max-width: 1em;
     }
 </style>

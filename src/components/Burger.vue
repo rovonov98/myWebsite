@@ -12,8 +12,8 @@
       position: fixed;
       z-index: 2;       
       max-width: 100%; 
-      top: 0;
-      left: 0;
+      top: 2vh;
+      left: 3vw;
       right: 0;
       padding: 2em;
     }

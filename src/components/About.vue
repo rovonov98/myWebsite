@@ -31,6 +31,7 @@
         color: $main-color-one;
         margin: 0 auto;
         .about-h2 {
+            text-align: center;
             line-height: 2em;
             font-size: 3em;
         }

@@ -37,6 +37,7 @@ export default {
         max-width: $main-container;
     }
     .skills-h2 {
+        text-align: center;
         font-size: 3em;
         margin: 2em;
         color: $main-color-two;

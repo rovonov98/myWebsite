@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div class="header-mobile">
         <a name="home"></a>
         <nav class="nav">
             <ul class="navbar">
@@ -14,7 +14,8 @@
 </template>
 
 <style scoped lang="scss">
-    .header{
+    .header-mobile{
+        display: none;
         position: fixed;
         max-width: 100%; 
         top: 0;
@@ -56,5 +57,10 @@
         max-width: 100%;
         padding: 1.5em;
         letter-spacing: .1em
+    }
+    @media(max-width: 768px) {
+        .header-mobile {
+            display: block;
+        }
     }
 </style>

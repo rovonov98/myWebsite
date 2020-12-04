@@ -1,11 +1,14 @@
 <template>
   <div id="app">
+    
+    <a name="home"></a>
     <NavMobile v-bind:class="{ open: showNav }"/>
     <Burger 
     @click.native="showNav = !showNav"
     v-if="mobileView"/>
-    <Header v-if="!mobileView"/>
     <div class="content" v-bind:class="{ opened: showNav }">
+      <Preloader />
+      <Header v-if="!mobileView"/>
       <Main />
       <Skills />
       <About />
@@ -24,6 +27,7 @@ import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
 import Burger from './components/Burger';
 import NavMobile from './components/NavMobile';
+import Preloader from './components/Preloader';
 export default {
   name: 'App',
   components: {
@@ -34,12 +38,13 @@ export default {
     Portfolio,
     Footer,
     Burger,
-    NavMobile
+    NavMobile,
+    Preloader
   },
   data() {
       return {
           mobileView: true,
-          showNav: false
+          showNav: false,
       }
   },
   methods: {
@@ -50,7 +55,7 @@ export default {
   created() {
     this.handleView();
     window.addEventListener('resize', this.handleView);
-    console.log("Get out");
+    console.log("for more info: https://www.youtube.com/watch?v=dQw4w9WgXcQ");
   }
 }
 
@@ -84,11 +89,6 @@ export default {
       $main-container: 80%;
     }
   }
-  // @media(max-width: 768px) {
-  //   body {
-  //     overflow-x: hidden;
-  //   }
-  // }
   @media(min-width: 576px) {
     body {
       font-size: 10px;

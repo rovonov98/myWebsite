@@ -1,6 +1,5 @@
 <template>
     <header class="header">
-        <a name="home"></a>
         <nav class="nav">
             <div class="logo nav-link">
                 <a class="nav-a" href="#home">HOME</a>
@@ -23,6 +22,8 @@
         top: 0;
         left: 0;
         right: 0;
+        margin-left: auto;
+        margin-right: auto;
         background: $main-color-two;
         border-radius: 1%;
     }
