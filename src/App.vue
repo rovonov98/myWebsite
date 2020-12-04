@@ -2,10 +2,11 @@
   <div id="app">
     
     <a name="home"></a>
-    <NavMobile v-bind:class="{ open: showNav }"/>
+    
     <Burger 
-    @click.native="showNav = !showNav"
+    @click.native="toggleScroll"
     v-if="mobileView"/>
+    <NavMobile v-bind:class="{ open: showNav }"/>
     <div class="content" v-bind:class="{ opened: showNav }">
       <Preloader />
       <Header v-if="!mobileView"/>
@@ -50,7 +51,11 @@ export default {
   methods: {
     handleView() {
       this.mobileView = window.innerWidth <= 768;
-    }
+    },
+    toggleScroll() {
+      document.body.classList.toggle('scroll');
+      this.showNav = !this.showNav
+    },
   },
   created() {
     this.handleView();
@@ -58,7 +63,6 @@ export default {
     console.log("for more info: https://www.youtube.com/watch?v=dQw4w9WgXcQ");
   }
 }
-
 </script>
 
 <style lang="scss">
@@ -72,10 +76,17 @@ export default {
     margin: 0;
     box-sizing: border-box;
   }
+  .scroll {
+    overflow: hidden;
+    .content {
+      opacity: .7;
+    }
+  }
   .content {
     position: absolute;
     top: 0;
     transition: 1s cubic-bezier(0,.12,.14,1);
+    overflow-x: hidden;
   }
   .open {
     z-index: 2;

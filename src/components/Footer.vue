@@ -13,7 +13,7 @@
                 </div>
                 <div class="contact">
                     <img class="img" src="../assets/img/github.svg" alt="">
-                    <p >Github: <a href="https://github.com/rovonov98"></a>https://github.com/rovonov98</p>
+                    <p>Github: <a class="footer-link" href="https://github.com/rovonov98">https://github.com/rovonov98</a></p>
                 </div>
                 
             </div>

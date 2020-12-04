@@ -10,7 +10,7 @@
     .main {
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 100vh;
+        min-height: 105vh;
         max-width: 100%;
         color: $main-color-one;
         display: flex;

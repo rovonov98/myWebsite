@@ -5,9 +5,7 @@
             <ul class="navbar">
                 <li class="nav-link"><a class="nav-a" href="#home">HOME</a></li>
                 <li class="nav-link"><a class="nav-a" href="#skills">SKILLS</a></li>
-                <li class="nav-link"><a class="nav-a" href="#about">ABOUT</a></li>
                 <li class="nav-link"><a class="nav-a" href="#portfolio">PORTFOLIO</a></li>
-                <li class="nav-link"><a class="nav-a" href="#contacts">CONTACS</a></li>
             </ul>
         </nav>
     </div>

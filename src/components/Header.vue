@@ -6,17 +6,15 @@
             </div>
             <ul class="navbar">
                 <li class="nav-link"><a class="nav-a" href="#skills">SKILLS</a></li>
-                <li class="nav-link"><a class="nav-a" href="#about">ABOUT</a></li>
                 <li class="nav-link"><a class="nav-a" href="#portfolio">PORTFOLIO</a></li>
-                <li class="nav-link"><a class="nav-a" href="#contacts">CONTACS</a></li>
             </ul>
         </nav>
     </header>
 </template>
 
 <style scoped lang="scss">
-    .header{
-        position: sticky;
+    .header {
+        position: fixed;
         z-index: 2;       
         max-width: 100%; 
         top: 0;
@@ -45,7 +43,7 @@
             background:	$main-color-hover;
         }
         :active {
-            background:$main-color-active;
+            background: $main-color-active;
         }
     }
     .nav-a {
