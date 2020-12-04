@@ -7,5 +7,5 @@ module.exports = {
             }
         }
     },
-    // publicPath: '/mywebsite/'
+    publicPath: '/mywebsite/'
 }
